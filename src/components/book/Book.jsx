@@ -33,27 +33,29 @@ const Book = () => {
             setEr(true);
             return;
         }
-else {
-    const myobj={
-        bookname:bo,
-        autor:au,
-        publisher:pu
-}
+        else {
+            const myobj = {
+                bookname: bo,
+                autor: au,
+                publisher: pu
+            }
 
-fetch("https://sampledbcs-e6a8c-default-rtdb.firebaseio.com/sampledbcs.json",
-{
-    method:"POST",
-    body:JSON.stringify(myobj),
-    headers:{"content-type":"application/json",
-}
-}
-)
-}
-        
+            fetch("https://sampledbcs-e710b-default-rtdb.firebaseio.com/book.json",
+                {
+                    method: "POST",
+                    body: JSON.stringify(myobj),
+                    headers: {
+                        "content-type": "application/json",
+                    }
+                }
+            );
+            alert("Record Saved")
         }
-       
-    
-  return (
+
+    }
+
+
+    return (
         <div>
             <h1 className='t'>Book Details</h1>
             <form>

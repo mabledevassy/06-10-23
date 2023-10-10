@@ -5,6 +5,7 @@ import Login from "./components/login/Login";
 import Logindata from "./components/login/Logindata";
 import Home from "./components/Home/Home";
 import Book from "./components/book/Book";
+import Bookview from "./components/book/Bookview";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
           <Route path={'/Ldata'} element={<Logindata />}></Route>
           <Route path={'/course'} element={<Course />}></Route>
           <Route path={'/Home'} element={<Home />}></Route>
+         
           <Route path={'/b'} element={<Book/>}></Route>
+          <Route path={'/v'} element={<Bookview/>}></Route>
         </Routes>
        </BrowserRouter>
       
