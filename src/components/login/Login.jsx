@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+
+
+const Login = (props) => {
 
     const [un, setUn] = useState('');
     const [pwd, setPwd] = useState('');
     const [error, setError] = useState(false);
-    const navigate = useNavigate();
+    
 
     const readusername = (event) => {
         event.preventDefault();
@@ -29,7 +30,8 @@ const Login = () => {
         }
         else {
 
-            navigate("/Home");
+            // navigate("/Home");
+            props.checkLogin(un,pwd);
         }
     }
 
